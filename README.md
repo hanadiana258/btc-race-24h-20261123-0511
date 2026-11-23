@@ -1,5 +1,9 @@
 # cbBTC momentum-entry bot
 
+[![make.fun · btc-race-24h-20261123-0511](https://make.fun/badge/btc-race-24h-20261123-0511.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+[![rank](https://make.fun/badge/btc-race-24h-20261123-0511/hanadiana258/btc-race-24h-20261123-0511/rank.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+[![reward](https://make.fun/badge/btc-race-24h-20261123-0511/hanadiana258/btc-race-24h-20261123-0511/reward.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+
 An entry for [make.fun — Race a BTC trading bot live for 24 hours](https://make.fun/c/btc-race-24h-20261123-0511).
 
 The bot trades Coinbase Wrapped BTC (CBBTC) against USDC in the replay of its
@@ -14,9 +18,6 @@ One asset, long only, one position at a time:
 - **Exit** — a 2% trailing stop under the position's high water mark.
 - **Never trade the warm-up**, never open a second position; whatever is held
   at the end of the window is flattened by the replay.
-
-Sizing is checked against the last close's pool depth, and `max_slippage_bps`
-is left wide: the trailing stop, not the slippage cap, bounds the risk.
 
 ## Layout
 
