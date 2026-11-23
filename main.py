@@ -43,7 +43,8 @@ def on_batch(state, batch):
         # buy never races the weight cap. The trailing stop, not a slippage cap,
         # bounds the downside.
         spend = int(state.cash * BUY_FRACTION)
-        if spend < state.hello["fees"]["min_notional_quote_units"]:
+        min_notional = int(state.hello["fees"]["min_notional_quote_units"])
+        if spend < min_notional:
             return []
         return [{"side": "buy", "symbol": SYMBOL, "notional_quote_units": spend,
                  "max_slippage_bps": SLIPPAGE_BPS}]
